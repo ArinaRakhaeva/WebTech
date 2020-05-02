@@ -2,7 +2,7 @@
 .navbar {
     margin-bottom: 0;
     border-radius: 0;
-    background-color: #000000;
+    background-color: #e3f2fd;
     color: white;
 }
 /* Set gray background color and 100% height */
@@ -16,14 +16,18 @@
 .row.content {height: 450px}
 
 .active {
-    background-color: #3fd646;
+    background-color: #47d6c5;
     color: white;
+}
+
+img{
+    width:100%;max-width:1000px
 }
 
 /* Set black background color, white text and some padding */
 footer {
-    background-color: #3da92d;
-    color: white;
+    background-color: #e3f2fd;
+    color: #818a91;
     padding: 15px;
 }
 

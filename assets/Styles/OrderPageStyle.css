@@ -2,9 +2,15 @@
 .navbar {
     margin-bottom: 0;
     border-radius: 0;
-    background-color: #000000;
+    background-color: #e3f2fd;
     color: white;
 }
+
+#section1 {padding-top:50px;height:500px;color: #fff; background-color: #b3d4e5;}
+#section2 {padding-top:50px;height:500px;color: #fff; background-color: #5bdae5;}
+#section3 {padding-top:50px;height:500px;color: #fff; background-color: #53a8e5;}
+#section4 {padding-top:50px;height:500px;color: #fff; background-color: #7076e5;}
+
 /* Set gray background color and 100% height */
 .sidenav {
     padding-top: 60px;
@@ -12,29 +18,25 @@
     height: 100%;
 }
 
-body {
-    position: relative;
-}
-#section1 {padding-top:50px;height:500px;color: #fff; background-color: #1E88E5;}
-#section2 {padding-top:50px;height:500px;color: #fff; background-color: #673ab7;}
-#section3 {padding-top:50px;height:500px;color: #fff; background-color: #ff9800;}
-#section4 {padding-top:50px;height:500px;color: #fff; background-color: #00bcd4;}
-
-.panel-body {
-    color: black;
-}
-
 /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
 .row.content {height: 450px}
 
 .active {
-    background-color: #3fd646;
+    background-color: #47d6c5;
     color: white;
+}
+
+body {
+    position: relative;
+}
+
+img {
+    width:100%;max-width:1000px
 }
 
 /* Set black background color, white text and some padding */
 footer {
-    background-color: #3da92d;
+    background-color: #e3f2fd;
     color: white;
     padding: 15px;
 }
