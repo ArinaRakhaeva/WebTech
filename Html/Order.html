@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../Styles/HomePageStyle.css">
+    <link rel="stylesheet" href="../Styles/OrderPageStyle.css">
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -19,86 +19,135 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Logo</a>
+            <a class="navbar-brand" href="#">Home made</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
+           <!-- <ul class="nav navbar-nav">
                 <li><a href="./HomePage.html">Home</a></li>
                 <li><a href="./AboutUs.html">About</a></li>
                 <li><a href="./Order.html">Order</a></li>
-            </ul>
+            </ul>-->
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li><a href="#section1">Plan</a></li>
+                <li><a href="#section2">Area</a></li>
+                <li><a href="#section3">Time</a></li>
+                <li><a href="#section4">Price</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
 <div class="col-sm-2 sidenav">
-    <p><a href="#">Link</a></p>
-    <p><a href="#">Link</a></p>
-    <p><a href="#">Link</a></p>
+    <p><a href="./HomePage.html">Home</a></p>
+    <p><a href="./AboutUs.html">About</a></p>
 </div>
 
 <div class="container-fluid text-center">
     <div class="row content">
         <div class="col-sm-8 text-left">
-            <ul>
-                <li>
-                    <div class="dropdown-wrapper">
-                        <div class="dropdown-header">
-                            <div class="dropdown-title"><p>Plans</p></div>
+            <div id="section1" class="container-fluid">
+                <h1>Plan</h1>
+                <p>Here you can choose your plan</p>
+                <div class="panel panel-default">
+                    <button id="fit" name="fit" class="btn btn-default btn-block" onclick="changeStylePlans(this)">Fit</button>
+                </div>
+                <div class="panel panel-default">
+                    <button id="normal" name="normal" class="btn btn-default btn-block" onclick="changeStylePlans(this)">Normal</button>
+                </div>
+                <div class="panel panel-default">
+                    <button id="family" name="family" class="btn btn-default btn-block" onclick="changeStylePlans(this)">Family</button>
+                </div>
+            </div>
+            <div id="section2" class="container-fluid">
+                <h1>Area</h1>
+                <p>Here you can choose your Area</p>
+                <div class="panel panel-default">
+                    <button id="Kalininsky" class="btn btn-default btn-block" onclick="changeStyleAreas(this)">Калининский</button>
+                </div>
+                <div class="panel panel-default">
+                    <button id="Central" class="btn btn-default btn-block" onclick="changeStyleAreas(this)">Центральный</button>
+                </div>
+                <div class="panel panel-default">
+                    <button id="VO" class="btn btn-default btn-block" onclick="changeStyleAreas(this)">Васильевский Остров</button>
+                </div>
+            </div>
+            <div id="section3" class="container-fluid">
+                <h1>Time</h1>
+                <p>Here you can choose most suitable time</p>
+                <div class="panel panel-default">
+                    <button id="AM" class="btn btn-default btn-block" onclick="changeStyleTime(this)">9:00</button>
+                </div>
+                <div class="panel panel-default">
+                    <button id="PM" class="btn btn-default btn-block" onclick="changeStyleTime(this)">21:00</button>
+                </div>
+            </div>
+            <div id="section4" class="container-fluid">
+                <h1>Price</h1>
+                <p>Here you will see the price</p>
+                <output id="resPrice">0</output>
+                <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+            </div>
+            <!--<div class="container-fluid text-center">
+                <div class="row content">
+                    <div class="col-sm-8 text-left">
+                        <ul>
+                            <li>
+                                <div class="dropdown-wrapper">
+                                    <div class="dropdown-header">
+                                        <div class="dropdown-title"><p>Plans</p></div>
 
-                            <div class="dropdown-arrow">
-                                <div class="arrow"></div>
-                            </div>
-                        </div>
-                        <div class="dropdown-panel">
-                            <ul id="plans">
-                                <li>Fit</li>
-                                <li>Normal</li>
-                                <li>Family</li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="dropdown-wrapper">
-                        <div class="dropdown-header">
-                            <div class="dropdown-title"><p>Areas</p></div>
-                            <div class="dropdown-arrow">
-                                <div class="arrow"></div>
-                            </div>
-                        </div>
-                        <div class="dropdown-panel">
-                            <ul id="areas">
-                                <li class="area">Калининский</li>
-                                <li>Выборгский</li>
-                                <li>Васильевский остров</li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="dropdown-wrapper">
-                        <div class="dropdown-header">
-                            <div class="dropdown-title"><p>Price</p></div>
-                            <div class="dropdown-arrow">
-                                <div class="arrow"></div>
-                            </div>
-                        </div>
-                        <div class="dropdown-panel">
-                            <ul id="colors">
-                                <li>10 000</li>
-                                <li>15 000</li>
-                                <li>20 000/li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-
+                                        <div class="dropdown-arrow">
+                                            <div class="arrow"></div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-panel">
+                                        <ul id="plans">
+                                            <li>Fit</li>
+                                            <li>Normal</li>
+                                            <li>Family</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown-wrapper">
+                                    <div class="dropdown-header">
+                                        <div class="dropdown-title"><p>Areas</p></div>
+                                        <div class="dropdown-arrow">
+                                            <div class="arrow"></div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-panel">
+                                        <ul id="areas">
+                                            <li class="area">Калининский</li>
+                                            <li>Выборгский</li>
+                                            <li>Васильевский остров</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown-wrapper">
+                                    <div class="dropdown-header">
+                                        <div class="dropdown-title"><p>Price</p></div>
+                                        <div class="dropdown-arrow">
+                                            <div class="arrow"></div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-panel">
+                                        <ul id="colors">
+                                            <li>10 000</li>
+                                            <li>15 000</li>
+                                            <li>20 000</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>-->
+    </div>
         <div class="col-sm-2 sidenav">
             <div class="well">
                 <p>ADS</p>
@@ -107,17 +156,17 @@
                 <p>ADS</p>
             </div>
         </div>
+        </div>
     </div>
-</div>
 
 <footer class="container-fluid text-center">
-    <p>Footer Text</p>
+    <p><a href="./HomePage.html">Home</a></p>
 </footer>
 
 </body>
 
-<script src="assets/js/dropdown.js"></script>
-<script src="assets/js/observable.js"></script>
-<script src="assets/js/data.js"></script>
-<script src="assets/js/main.js"></script>
+<!--<script src="../assets/JS/dropdown.js"></script>
+<script src="../assets/JS/observable.js"></script>
+<script src="../assets/JS/data.js"></script>-->
+<script src="../assets/JS/main1.js"></script>
 </html>
