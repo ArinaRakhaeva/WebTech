@@ -11,14 +11,13 @@
 #section3 {padding-top:50px;height:500px;color: #fff; background-color: #53a8e5;}
 #section4 {padding-top:50px;height:500px;color: #fff; background-color: #7076e5;}
 
-/* Set gray background color and 100% height */
 .sidenav {
     padding-top: 60px;
     background-color: #fffefa;
     height: 100%;
+    text-align: center;
 }
 
-/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
 .row.content {height: 450px}
 
 .active {

@@ -18,14 +18,6 @@
             <a class="navbar-brand">Home Made</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
-           <!-- <ul class="nav navbar-nav">
-                <li><a href="./HomePage.html">Home</a></li>
-                <li><a href="./AboutUs.html">About</a></li>
-                <li><a href="./Order.html">Order</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-            </ul>-->
             <ul class="nav navbar-nav">
                 <li><a href="#section1">Plan</a></li>
                 <li><a href="#section2">Area</a></li>
@@ -37,8 +29,8 @@
 </nav>
 
 <div class="col-sm-2 sidenav">
-    <p><a href="./HomePage.html">Home</a></p>
-    <p><a href="./AboutUs.html">About</a></p>
+    <h4><a href="./HomePage.html">Home</a></h4>
+    <h4><a href="./AboutUs.html">About</a></h4>
 </div>
 
 <div class="container-fluid text-center">
@@ -48,36 +40,36 @@
                 <h1>Plan</h1>
                 <p>Here you can choose your plan</p>
                 <div class="panel panel-default">
-                    <button id="fit" name="fit" class="btn btn-default btn-block" onclick="changeStylePlans(this)">Fit</button>
+                    <button id="fit" name="fit" class="btn btn-default btn-block" onclick="changeStyle(this, 'plan')">Fit</button>
                 </div>
                 <div class="panel panel-default">
-                    <button id="normal" name="normal" class="btn btn-default btn-block" onclick="changeStylePlans(this)">Normal</button>
+                    <button id="normal" name="normal" class="btn btn-default btn-block" onclick="changeStyle(this, 'plan')">Normal</button>
                 </div>
                 <div class="panel panel-default">
-                    <button id="family" name="family" class="btn btn-default btn-block" onclick="changeStylePlans(this)">Family</button>
+                    <button id="family" name="family" class="btn btn-default btn-block" onclick="changeStyle(this, 'plan')">Family</button>
                 </div>
             </div>
             <div id="section2" class="container-fluid">
                 <h1>Area</h1>
                 <p>Here you can choose your Area</p>
                 <div class="panel panel-default">
-                    <button id="Kalininsky" class="btn btn-default btn-block" onclick="changeStyleAreas(this)">Калининский</button>
+                    <button id="Kalininsky" class="btn btn-default btn-block" onclick="changeStyle(this, 'area')">Калининский</button>
                 </div>
                 <div class="panel panel-default">
-                    <button id="Central" class="btn btn-default btn-block" onclick="changeStyleAreas(this)">Центральный</button>
+                    <button id="Central" class="btn btn-default btn-block" onclick="changeStyle(this, 'area')">Центральный</button>
                 </div>
                 <div class="panel panel-default">
-                    <button id="VO" class="btn btn-default btn-block" onclick="changeStyleAreas(this)">Васильевский Остров</button>
+                    <button id="VO" class="btn btn-default btn-block" onclick="changeStyle(this, 'area')">Васильевский Остров</button>
                 </div>
             </div>
             <div id="section3" class="container-fluid">
                 <h1>Time</h1>
                 <p>Here you can choose most suitable time</p>
                 <div class="panel panel-default">
-                    <button id="AM" class="btn btn-default btn-block" onclick="changeStyleTime(this)">9:00</button>
+                    <button id="AM" class="btn btn-default btn-block" onclick="changeStyle(this, 'time')">9:00</button>
                 </div>
                 <div class="panel panel-default">
-                    <button id="PM" class="btn btn-default btn-block" onclick="changeStyleTime(this)">21:00</button>
+                    <button id="PM" class="btn btn-default btn-block" onclick="changeStyle(this, 'time')">21:00</button>
                 </div>
             </div>
             <div id="section4" class="container-fluid">

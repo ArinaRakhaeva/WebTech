@@ -1,4 +1,4 @@
-var prices = {
+let prices = {
     "plan" : {
         "fit" : 1000,
         "normal" : 2000,
@@ -18,19 +18,41 @@ var prices = {
     }
 };
 
-var options = {
+let options = {
     "plan" : "",
     "area" : "",
     "time" : "",
 };
 
-var resultPrice = 0;
+let resultPrice = 0;
 
-function changeStylePlans(element) {
-    let planes = [document.getElementById("fit"),
+const obj = {
+    'plan': [document.getElementById("fit"),
+        document.getElementById("normal"),
+        document.getElementById("family")],
+    'area': [document.getElementById("Kalininsky"),
+        document.getElementById("Central"),
+        document.getElementById("VO")],
+    'time': [document.getElementById("AM"),
+        document.getElementById("PM")],
+};
+function changeStyle(element, type) {
+    obj[type].forEach(plan => {
+        if (plan === element) {
+            plan.classList.add("btn-primary");
+            options[type] = plan.id;
+        } else {
+            plan.classList.remove("btn-primary");
+        }
+    });
+    showPrice();
+}
+
+/*function changeStylePlans(element) {
+    let plans = [document.getElementById("fit"),
         document.getElementById("normal"),
         document.getElementById("family")];
-    planes.forEach(plan => {
+    plans.forEach(plan => {
         if (plan === element) {
             plan.classList.add("btn-primary");
             options["plan"] = plan.id;
@@ -68,7 +90,7 @@ function changeStyleTime(element) {
         }
     });
     showPrice();
-}
+}*/
 
 function showPrice () {
     let elem = document.getElementById("resPrice");
